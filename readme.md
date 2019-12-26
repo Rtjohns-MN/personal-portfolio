@@ -6,3 +6,6 @@ git push origin master
 
 How pull from github:
 git pull origin master
+
+Website link:
+https://rtjohns-mn.github.io/personal-portfolio/
