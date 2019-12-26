@@ -31,4 +31,8 @@ header {
     padding: 4px;
 }
 
+#nav-placeholder {
+    grid-column: 2 / 3;
+}
+
 
