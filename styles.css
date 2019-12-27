@@ -2,13 +2,17 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
-    background: lightblue;
+    background-color: #393939;
+    background-image: url("images/website-bg.png");
+    background-repeat: repeat-x;
+
 }
 
 
 header {
     grid-column: 2 / 3;
-    background-color: white;
+    color: white;
+    font-family: sans-serif;
     text-align: center;
 }
 #navlink {
@@ -18,7 +22,8 @@ header {
 }
 .navdiv {
     text-transform: uppercase;
-    border: 1px solid grey;
+    background-color: lightgrey;
+    border: 1px solid #444444;
 }
 
 .navdiv a {
@@ -35,4 +40,8 @@ header {
     grid-column: 2 / 3;
 }
 
-
+content {
+    grid-column: 2 / 3;
+    color: white;
+    background-color: grey;
+}
