@@ -5,7 +5,7 @@ body {
     background-color: #393939;
     background-image: url("images/website-bg.png");
     background-repeat: repeat-x;
-
+    text-align: center;
 }
 
 
@@ -15,9 +15,12 @@ header {
     font-family: sans-serif;
     text-align: center;
 }
+header h1 {
+    text-shadow: 2px 2px 4px #000000;
+}
 #navlink {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 100%;
 }
 .navdiv {
@@ -43,5 +46,5 @@ header {
 content {
     grid-column: 2 / 3;
     color: white;
-    background-color: grey;
+    background-color: #444444;
 }
