@@ -46,5 +46,14 @@ header h1 {
 content {
     grid-column: 2 / 3;
     color: white;
-    background-color: #444444;
+    background-color: rgba(44,44,44,0.5);
+    text-align: center;
+}
+content a:link, a:visited {
+    background-color: #4c82ad;
+    color: white;
+    padding: 10px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
