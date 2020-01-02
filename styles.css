@@ -57,3 +57,21 @@ content a:link, a:visited {
     text-decoration: none;
     display: inline-block;
 }
+
+.bannered {
+    background-image: url("images/website-lefttop.png"), url("images/website-righttop.png");
+    background-position: 25% 80%, 75% 80%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 15% auto, 15% auto; 
+    padding-left: 20%;
+    padding-right: 20%
+}
+
+.botbanner {
+    background-image: url("images/website-bottomfull.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 58% 70%;
+    padding: 4px;
+}
+
