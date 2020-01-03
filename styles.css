@@ -61,7 +61,7 @@ content {
     text-align: center;
     padding: 2% 2% 2% 2%;
 }
-content a:link, a:visited. a:hover, a:active {
+content a:link, a:visited {
     background-color: #4c82ad;
     color: white;
     padding: 10px 21px;
