@@ -17,7 +17,17 @@ header {
 }
 header h1 {
     text-shadow: 2px 2px 4px #000000;
+    font-family: sans-serif;
 }
+
+h1 {
+    font-family: sans-serif;
+}
+h2 {
+    line-height: 50%;
+    font-family: sans-serif;
+}
+
 #navlink {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -48,6 +58,7 @@ content {
     color: white;
     background-color: rgba(44,44,44,0.5);
     text-align: center;
+    padding: 2% 2% 2% 2%;
 }
 content a:link, a:visited {
     background-color: #4c82ad;
@@ -56,6 +67,10 @@ content a:link, a:visited {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+}
+
+content h1 {
+    text-shadow: 0px 0px 5px #000000;
 }
 
 .bannered {
@@ -73,5 +88,18 @@ content a:link, a:visited {
     background-repeat: no-repeat;
     background-size: 58% 70%;
     padding: 4px;
+}
+
+.pillars {
+    list-style-position: inside;
+}
+
+table {
+    margin: auto;
+    text-align: left;
+}
+
+p {
+    padding: 2% 10% 2% 10%;
 }
 
