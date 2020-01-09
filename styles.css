@@ -59,7 +59,7 @@ content {
     color: white;
     background-color: rgba(44,44,44,0.5);
     text-align: center;
-    padding: 2% 2% 2% 2%;
+    padding: 2% 0 2% 0;
 }
 content a:link, content a:visited, content a:hover, content a:active {
     background-color: #4c82ad;
@@ -101,7 +101,9 @@ table {
 }
 
 p {
-    padding: 2% 10% 2% 10%;
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #totopbutton {
