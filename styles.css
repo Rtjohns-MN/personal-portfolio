@@ -104,3 +104,9 @@ p {
     padding: 2% 10% 2% 10%;
 }
 
+#totopbutton {
+    grid-column: 3 / 4;
+    position: fixed;
+    bottom: 10%;
+    right: 2%;
+}
