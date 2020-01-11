@@ -28,8 +28,15 @@
     <p>I've created quite a few Flash programs as the Flash application 
     easily lets you combine code and artwork in a single program.</p>
     <h2>Fireworks Display</h2>
-    <object width="550" height="400" data="flash/firework_display.swf"></object>
+    <button onclick="startFireworks()">Play Fireworks</button>
+    <!-- <object width="550" height="400" data="flash/firework_display.swf"></object> -->
+    <object width="550" height="400" id="fireworks" data=null></object>
     <div class="botbanner"><br></div>
     </content>
+    <script>
+        function startFireworks() {
+            document.getElementById("fireworks").setAttribute("data","flash/firework_display.swf");
+        }
+    </script>
 </body>
 </html>
