@@ -30,7 +30,9 @@
     <h2>Fireworks Display</h2>
     <button onclick="startFireworks()">Toggle Fireworks</button> <br>
     <!-- <object width="550" height="400" data="flash/firework_display.swf"></object> -->
-    <object width="550" height="400" id="fireworks" ></object>
+    <object width="550" height="400" id="fireworks" ></object><br><br>
+    <button onclick="startSWF('fireworks','flash/firework_display.swf')">Toggle Fireworks2</button> <br>
+    <object width="550" height="400" id="fireworks2" ></object><br><br>
     <div class="botbanner"><br></div>
     </content>
     <script>
@@ -39,6 +41,16 @@
             if(swf.getAttribute('data') == null){
                 //alert("Fireworks on");
                 swf.setAttribute("data","flash/firework_display.swf");
+            } else {
+                //alert(swf.getAttribute('data'));
+                swf.removeAttribute("data");
+            }
+        }
+        function startSWF(id, file) {
+            swf = document.getElementById(id);
+            if(swf.getAttribute('data') == null){
+                //alert("Fireworks on");
+                swf.setAttribute("data",file);
             } else {
                 //alert(swf.getAttribute('data'));
                 swf.removeAttribute("data");
