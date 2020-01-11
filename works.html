@@ -28,11 +28,9 @@
     <p>I've created quite a few Flash programs as the Flash application 
     easily lets you combine code and artwork in a single program.</p>
     <h2>Fireworks Display</h2>
-    <button onclick="startFireworks()">Toggle Fireworks</button> <br>
+    <button onclick="startSWF('fireworks','flash/firework_display.swf')">Toggle Fireworks</button> <br>
     <!-- <object width="550" height="400" data="flash/firework_display.swf"></object> -->
     <object width="550" height="400" id="fireworks" ></object><br><br>
-    <button onclick="startSWF('fireworks','flash/firework_display.swf')">Toggle Fireworks2</button> <br>
-    <object width="550" height="400" id="fireworks2" ></object><br><br>
     <div class="botbanner"><br></div>
     </content>
     <script>
@@ -46,6 +44,7 @@
                 swf.removeAttribute("data");
             }
         }
+        
         function startSWF(id, file) {
             swf = document.getElementById(id);
             if(swf.getAttribute('data') == null){
