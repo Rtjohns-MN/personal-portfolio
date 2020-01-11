@@ -6,7 +6,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    <!--Navigation bar by Ramtin on stackoverflow-->
+    <!--Navigation bar script by Ramtin on stackoverflow-->
     <div id="nav-placeholder">
 
     </div>
@@ -30,15 +30,18 @@
     <h2>Fireworks Display</h2>
     <button onclick="startFireworks()">Toggle Fireworks</button> <br>
     <!-- <object width="550" height="400" data="flash/firework_display.swf"></object> -->
-    <object width="550" height="400" id="fireworks" data=null></object>
+    <object width="550" height="400" id="fireworks" ></object>
     <div class="botbanner"><br></div>
     </content>
     <script>
         function startFireworks() {
-            if(document.getElementById("fireworks").data == null){
-                document.getElementById("fireworks").setAttribute("data","flash/firework_display.swf");
-            }else {
-                document.getElementById("fireworks").setAttribute("data","null");
+            swf = document.getElementById("fireworks");
+            if(swf.getAttribute('data') == null){
+                //alert("Fireworks on");
+                swf.setAttribute("data","flash/firework_display.swf");
+            } else {
+                //alert(swf.getAttribute('data'));
+                swf.removeAttribute("data");
             }
         }
     </script>
