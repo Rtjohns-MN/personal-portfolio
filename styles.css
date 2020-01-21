@@ -5,6 +5,7 @@ body {
     background-color: #393939;
     background-image: url("images/website-bg.png");
     background-repeat: repeat-x;
+    overflow-x: hidden;
     text-align: center;
 }
 
@@ -111,4 +112,33 @@ p {
     position: fixed;
     bottom: 10%;
     right: 2%;
+}
+
+div.galspace {
+    margin: 25px 25% 25px;
+    clear: both;
+    float: none;
+    height: 200px;
+    width: 100%;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #777;
+    float: left;
+    width: 180px;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+div.gallery a {
+    background-color: #ffffff;
+    padding: 5px 5px;
+}
+
+div.desc {
+    padding: 5px;
+    text-align: center;
 }
