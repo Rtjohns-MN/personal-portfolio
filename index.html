@@ -100,9 +100,65 @@
     used to eat the food is overriden and changed to eat using hands.</p>
     <div><br></div>   
     <hr>
+    
+    <h1>Solving Technical Problems</h1>
+    <p>In software technical problems occur sometimes as design choices 
+    can lead to unforseen errors. To resolve these errors we should follow 
+    a procedure.</p>
+    <h2>Gather Information</h2>
+    <p>The first step is to gather all of the information we have about 
+    the problem. If the issue was reported by someone else ask that person 
+    all the relevant questions about the problem. Good questions to ask are 
+    <br>What were you doing just before the problem occured?
+    <br>Do any error messages come up when the error happens and what do they say?
+    <br>How often does this problem occur?
+    <br>Does anyone else who uses the software have this problem?
+    <br>Is there a set of steps to trigger the problem?</p>
+    <h2>Find the Problem Trigger</h2>
+    <p>Test the system to find a way to trigger the error on your version 
+    of the system. This confirms that the problem exists within the system 
+    itself and may give a hint as to where the problem resides. If the 
+    client gave information about the problem use that to help trigger 
+    the error. It would help to use some type of process tracking program 
+    to give some additional information when the error occurs.</p>
+    <h2>Isolate Problem</h2>
+    <p>The third step is figuring out where the problem is in the system. 
+    Use any information from the previous steps to help determine what area 
+    the problem is in. Once you think you have found the general area/cause 
+    isolate that section of the system and try to trigger the error. If the 
+    error occurs as before, then we have located the general area of the error 
+    and can further isolate the system to find the exact cause of the error. If 
+    the error does NOT occur when isolated that means that a larger section 
+    of the system contains the error. While more difficult to resolve, we can 
+    still examine the steps the program is taking which causes the error.<br>
+    During this process it may help to use some types of data reporting to 
+    gain additional information during the error. The actual data to track 
+    depends on the type of error.</p>
+    <h2>Plan Solution</h2>
+    <p>Once you've found the location of the problem you need to determine 
+    a solution for it. Some errors are quick to resolve, and may just need 
+    a couple lines of code to fix, while more complex ones require a larger 
+    reaching solution. Planning a solution helps avoid creating additional 
+    problems while fixing this one. Errors can potentially cascade into a larger spiral 
+    of problems, which can undermine the system as a whole. Make sure to document 
+    the changes made for the solution so that in case the fix causes more problems 
+    you can revert to the previous state and try a different solution.</p>
+    <h2>Implement and Test Solution</h2>
+    <p>Follow the planned steps to fix the error and then run the relevant 
+    tests on the system to ensure that the error is fixed and then that 
+    it did not cause any additional errors. While it may seem redundant to 
+    test the entirety of the system, catching errors before they are sent 
+    out to clients is a huge priority.</p>
+    <h2>Deploy the Solution to Clients</h2>
+    <p>The updates need to be sent to the clients so that the error no 
+    longer occurs for them as well. You should ensure that the client 
+    which reported the error has the problem fixed as well.</p>
+    <hr>
+    
     <h1>UML Diagrams</h1>
     <p>Content</p>
     <hr>
+    
     <h1>Code Testing</h1>
     <p>Content</p>
     <hr>
