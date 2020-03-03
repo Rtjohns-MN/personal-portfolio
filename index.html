@@ -53,6 +53,8 @@
         <li><a href="#index_topic_2">2 Solving Technical Problems</a></li>
         <li><a href="#index_topic_3">3 UML Diagrams</a></li>
         <li><a href="#index_topic_4">4 Code Testing</a></li>
+        <li><a href="#index_topic_5">5 RESTful and SCRUM</a></li>
+
     </ul>
     </div>
     </div>
@@ -169,11 +171,75 @@
     <hr>
     
     <h1 id="index_topic_3">UML Diagrams</h1>
-    <p>Content</p>
+    <p>UML diagrams can be used for a number of different things but the
+    experience I've had was using them to represent class diagrams for 
+    programs.</p>
+    <h2>Objects</h2>
+    <p>Objects are represented by boxes with text. The object box is generally 
+    split into three separate boxes: title, attributes, and actions. <br>
+    The title displays the object name and can have the type as well. An object name
+    in italics is a abstract class, which itself will have no defined objects, but
+    have representative sub classes which do have defined instances.<br>
+    The attributes list the parameters and objects used by the class. 
+    Often they have the associated type for each parameter listed as well 
+    as its name, and value. A + by the name indicates that the attribute 
+    is public, while a - represents a private attribute.<br>
+    Actions are the methods and functions which the class can perform. 
+    It should list the name, parameters, and possibly the output of the 
+    function.</p>
+    <h2>Relationship Arrows</h2>
+    <p>Relationships between classes are defined using different types of arrows.
+    A solid arrow indicates that the class uses the target class. An arrow with 
+    dashes or a hollow head means that the class is a subclass of the parent class. 
+    A line with a diamon head is an aggregate of the class, meaning that it 
+    contains many of that object in that class.</p>
     <hr>
     
     <h1 id="index_topic_4">Code Testing</h1>
-    <p>Content</p>
+    <p>Code testing is done to ensure that the program passes all of the
+    required tasks, even as changes are made to the system.</p>
+    <hr>
+    
+    <h1 id="index_topic_5">RESTful APIs</h1>
+    <p>REST is an acronym for REpresentational State Transfer and is an
+    architectual style for distributed hypermedia systems. There are 6 
+    guiding constraints for using the REST style which are as follows.</p>
+    <p>1 Client-server: separating the user interface elements and the data 
+    management elements the entire system becomes more portable. Effectively,
+    different user interfaces can send messages to perform the same tasks
+    as they are referencing the same calls inside of the data management section.</p>
+    <p>2 Stateless: Session state is kept entirely by the client. This means that 
+    any request sent by the client contains all of the relevant information 
+    which the data manager needs to perform the action requested.</p>
+    <p>3 Cacheable: All data is labeled either cacheable or non-cacheable. 
+    Effectively asking if the data should be saved to be reused or if it 
+    is single use and not to be saved.</p>
+    <p>4 Uniform Interface: Using the software engineering principle of 
+    generality to the component interface, the system is simpified and improved.
+    Simply put, the interface should be consistent, and retain common elements.
+    This reduces the need to teach new functions, and quickens familiarity with the
+    system as a whole.<br>
+    Four Major Constriants for the Interface: identification of resources; 
+    manipulation of resources through representations; self-descriptive messages;
+    hypermedia as the engine of application state.</p>
+    <p>5 Layered System: Restrain component behavior to the each individual 
+    layer to reduce redundancy and errors.</p>
+    <p>6 Code on Demand (optional): allow extendability in the form of 
+    applets or scripts. This adds modularity under the control of the user 
+    so the core system can have a reduced number of provided features.</p>
+    <h2>Managing Resources</h2>
+    <p>Resources represent information which can be name inside of the system: 
+    a document, an image, a collection of other resources, a person, and so on. 
+    Every resource has some type of identifier to allow interaction between the 
+    components of the system. Each resource needs a type to help the user or 
+    system understand what the resouce is and how to use it.</p>
+    <p>When managing resources the system will use the HTTP methods of 
+    GET/PUT/POST/DELETE. While these methods have their own circumstances 
+    they are not a lone handler to the task. Resource information needs to
+    be tested and interpretted. Any query for resources should be a list of 
+    links to that resource with addition information about it, not simply a 
+    list of the resources. This is because each individual resource does not properly
+    represent the information on its own.</p>
     <hr>
 
     </content>
