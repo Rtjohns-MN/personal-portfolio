@@ -197,7 +197,70 @@
     
     <h1 id="index_topic_4">Code Testing</h1>
     <p>Code testing is done to ensure that the program passes all of the
-    required tasks, even as changes are made to the system.</p>
+    required tasks, even as changes are made to the system. Common types of 
+    testing includes Unit, Integration, Validation, Regression, Load, and Stress tests. 
+    Tests often use an assert function which takes a conditional statement 
+    and returns passed or failed based on if the conditional statement resulted in
+    true or false. Inside the conditional statement the parts being tested are the
+    method with proper parameters while on the other side is the resultant value it 
+    should (or shouldn't) return with.</p>
+    <table id="t_descr">
+        <tr><td>Unit Testing</td><td>Unit Testing involves writing tests which examine the behaviors of each 
+        individual object (a unit). A unit test checks the return parameters for the 
+        methods of the unit.
+        <br>EX: assert(adder.add(1,1)==2)</td>
+        </tr>
+        <tr><td>Integration Testing</td><td>Integration Testing examines the behavior of the combined units 
+        of the system, testing the units interacting with each other. As integration testing has
+        a large number of parts coming together it can be handled with a number of styles:
+        risky-hardest, top-down, bottom-up, mixed.
+        <br>EX: assert(equiv(addr(1,1),subt(2,1))==true)</td>
+        </tr>
+        <tr><td>Validation Verification Testing</td><td>Validation Testing is used to determine if the system meets the 
+        requirements and fulfills the intended purpose. This also relates to verification testing which 
+        is used to determine if the system is built correctly, IE without bugs or errors.
+        Essentially Verification is asking "are we building the product correctly?" while 
+        Validation is asking "are we building the right product?"</td>
+        </tr>
+        <tr><td>Regression Testing</td><td>Regression Testing is running all of the tests after an update 
+        to ensure that the changes made to the system still passes those tests. Failing the regression test 
+        means that the system has 'regressed' and must be fixed before proceeding forward.</td>
+        </tr>
+        <tr><td>Load Testing</td><td>Load Testing involves using the system with various access loads 
+        to determine the effects at those load levels. A load can be multiple things: a number of users 
+        using the system simultaneously, it can be the number of objects which exist, or a number 
+        of requests from various other sources. To test do a load test we need to have an automated 
+        exterior system which acts as the load which performs each task.
+        <br>EX: 25 virtual users log in, browse through items and then log off.</td>
+        </tr>
+        <tr><td>Stress Testing</td><td>Stress Testing generally involves the testing the physical 
+        limits of the system, often memory and CPU. Stress testing examines the behavior of the 
+        system when it is at its limit and beyond. What happens when too many users log on? What
+        happens when there are more accounts then there are ID values for? What happens when an
+        integer value tips over the highest number?</td>
+        </tr>
+    </table>
+    <p>More types of testing exist beyond these, but the core of every system should at least acknowledge these
+    6 types. These tests should be thorough enough to ensure that the system will not fail in the normal 
+    usage, but they do not need to cover 100% of potential cases. Most systems can function acceptably well
+    with 70% test functionality. The most important cases to examine with tests are the edge cases. An example
+    edge case would be the divide by 0 error. </p>
+    
+    <h2>Error Handling</h2>
+    <p>Another important part of testing is handling errors. When an error does occur what should the system
+    do? Should it crash or continue working? Should it open a dialogue box notifying the user or system? Should
+    it automatically handle the error and simply work around it?</p>
+    <p>If we know an error exists we can create a Try Catch container which can change how 
+    the system responds to that error. By placing the code which creates the error in the Try 
+    section it can then check to see if it hits an error by setting a Catch response 
+    targetted at that particular error. This allows us to change how that error is handled 
+    by say, returning a different value instead.</p>
+    <p>Example Error Handling<br>
+    In the Tabletop Manager application users can enter values for the action stats which are
+    automatically summed up into a total. If the user compeletely deletes the entry for the 
+    value then the system returns Not a Number to the sum which crashes the application. 
+    In order to handle this error I set the system to respond instead by sending 0 to the
+    sum total which prevents the crash.</p>
     <hr>
     
     <h1 id="index_topic_5">RESTful APIs</h1>

@@ -315,3 +315,14 @@ img.hover-shadow {
     text-align: left;
 
 }
+
+#t_descr {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+#t_descr td {
+    border: 1px solid grey;
+    padding: 3px;
+    text-align: left;
+}
