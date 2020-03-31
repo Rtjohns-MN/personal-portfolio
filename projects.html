@@ -97,7 +97,10 @@
     attack actions for combat in D&D 5e. One major problem I had to deal 
     with in the actions was the summing of the values. When a user changes 
     a value the sum value needs to update, but when a user deletes a value 
-    it would be a null, but should instead be a 0.</p>
+    it becomes an empty string, but should instead be a 0. In order to fix this problem 
+    I used a try-catch setup, which catches the error which happens when the empty
+    string is sent to the function determining the value. 
+    It then instead sends a 0, which is the appropriate response.</p>
     <hr>
     <h2 id="price_compare">Cereal Price Comparison Report</h2>
     <a href="https://drive.google.com/file/d/1sWmgyHHvGH2mua-k5m_jRrCfVKfgsaeO/view?usp=sharing" target="_blank">Cereals Report</a>
@@ -127,27 +130,49 @@
     <hr>
     <h2 id="word_search">Word Search</h2>
     <a href="https://mysterious-oasis-86042.herokuapp.com/index" target="_blank">Word Search Program</a>
-    <p>This web application is used to find words or certain sizes with 
-    certain pattern sets. <br>
-    Its hosted on Heroku (it will take a while to start up).</p>
+    <p>This application is hosted on Heroku (it will take a while to start up).<br>
+    This web application is used to find words of certain sizes or with 
+    certain pattern sets. You can enter letters to build words with and then choose 
+    how long the word can be. You can also enter a pattern with . as a 
+    blank space for each letter.</p>
+    <p>The program works by taking the inputs and comparing the parts to a 
+    large database of words. It filters out words which contain unused letters, 
+    or patterns, then restricts them by length. </p>
+    <p>Both pages are created using flask forms to check the for valid inputs 
+    and create a dynamic page. The searching and filtering is done using python. 
+    <br>NOTE: The definitions never match up to the words so they are disabled.</p>
     <hr>
     <h2 id="microblog">Microblog Site</h2>
     <a href="https://rtj-flask-microblog.herokuapp.com" target="_blank">Microblog Site</a>
     <p>This web application allows users to sign in and post blog information. 
     It uses flask and SQL on the back end to manage datastore accesses and then 
-    python to manage the handle the primary user requests.<br>
+    python to manage the primary user requests.<br>
     You are welcome to test out the site by creating your own account.
     Its hosted on Heroku (it will take a while to start up).</p>
     <hr>
     <h2 id="password_gen">XKCD Password generator</h2>
-    <p>This web application creates a randomly generated set of words to 
+    <p>This web application chooses a set of randomly generated words to 
     create a password which is easy to remember but long enough to be 
-    difficult to guess.</p>
+    difficult to guess. It was created using just HTML, CSS, and javascript.
+    The number substitution setting replaces some of the letters with numbers, 
+    for example 8 replaces the letter b, and 3 replaces e.
+    I've added an advanced setting which creates semi sentences. Each set of
+    words is organized into a category: animals, verbs, names, and conjuctions. 
+    Each sentence is then formed using the order name, verb, conjuct, animal.</p>
     <hr>
     <h2 id="api_mashup">API Mashup</h2>
+    <a href="https://rtjohns-mn.github.io/midterm4131.io/" target="_blank">API Mashup - Youtube x Flickr</a>
     <p>This web application works as a search engine which uses the input 
     to search both youtube and flickr websites and returns the relevant 
     results. (NOTE: the number of videos searched per day is limited)</p>
+    <p>I worked on the youtube side while my partner worked on the flickr side.
+    To load youtube videos we must get a player to handle them. This is provided
+    by the youtube.com/iframe_api as the object 'player'. To search youtube
+    for specific videos is more difficult, we need to first get authorization 
+    from youtube to make a request and then send a query to get responses back
+    from the site. Then we need to get the information for the specific video, here it's
+    the videoId, and then send that to the video player. This should change the player 
+    to play the new video, if one exists.</p>
     <hr>
     <h2 id="eternal_jukebox">Eternal Jukebox Analysis</h2>
     <a href="https://drive.google.com/file/d/1g8-gZX74CK6QTlqiY0jJHcOna1hzXRzs/view?usp=sharing" target="_blank">Eternal Jukebox Analysis</a>
