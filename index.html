@@ -361,6 +361,25 @@
     multiple categories of information defining the entries within. Each 
     table has one category set as a unique identifier which specifies that 
     particular entry to have a reference point.</p>
+    <h3>PC_Party_Table</h3>
+    <table id="t_descr">
+        <tr><td>ID</td><td>Player_name</td><td>Character_Name</td><td>Race</td><td>Class</td><td>HP</td><td>Armor</td><td>Role</td></tr>
+        <tr><td>PC01</td><td>David</td><td>Lidred</td><td>Lizan</td><td>Alchemist</td><td>78</td><td>25</td><td>Tank,Dps</td></tr>
+        <tr><td>PC02</td><td>Kyle</td><td>Anasar</td><td>Tiefling</td><td>Paladin</td><td>56</td><td>27</td><td>Tank</td></tr>
+        <tr><td>PC03</td><td>William</td><td>Rorke</td><td>Dwarf</td><td>Rogue</td><td>67</td><td>19</td><td>Skills</td></tr>
+        <tr><td>PC04</td><td>Billy</td><td>Saphira</td><td>Dark_elf</td><td>Witch</td><td>41</td><td>16</td><td>Support,Caster</td></tr>
+        <tr><td>PC05</td><td>Tiffani</td><td>Katie</td><td>Catfolk</td><td>Brawler</td><td>59</td><td>20</td><td>Dps</td></tr>
+        <tr><td>PC06</td><td>Joe</td><td>Terri</td><td>Gnome</td><td>Cleric</td><td>54</td><td>18</td><td>Support,Caster</td></tr>
+        <tr><td>PC07</td><td>Meg</td><td>Betty</td><td>Gnome</td><td>Sorcerer</td><td>43</td><td>17</td><td>Dps,Caster</td></tr>
+        <tr><td>PC08</td><td>David</td><td>Victor</td><td>Human</td><td>Alchemist</td><td>63</td><td>18</td><td>Dps,Caster</td></tr>
+        <tr><td>PC09</td><td>Kyle</td><td>Nezza</td><td>Samsaran</td><td>Bloodrager</td><td>51</td><td>18</td><td>Dps,Caster</td></tr>
+    </table>
+    <p>In this example table the ID is the primary key and, if needed, the 
+    secondary key is the character_name. Each category along the top declares 
+    the information which is stored below. These categories can be searched 
+    using a SELECT statement to get the relevant information about the characters.
+    If we wanted to see what players are the gnome race we would make a select statement
+    which returns Player_name and Race and filters the query by "Gnome".</p>
     <p>SQL uses a SELECT statement to search for relevant information. The 
     SELECT statement uses 4 parts to find the information. The SELECT part 
     chooses what categories to show in the returned information. The FROM 
@@ -368,6 +387,14 @@
     WITH and Having can be used to enter filters to specify what you are looking
     for in the tables. And GROUP BY can be used to condense repetitive 
     data or sort the entries.</p>
+    <p>SELECT Player_Name, Race<br>
+    FROM PC_Party_Table<br>
+    WHERE Race = "Gnome";</p>
+    <table id="t_descr">
+        <tr><td>ID</td><td>Player_name</td><td>Character_Name</td><td>Race</td><td>Class</td><td>HP</td><td>Armor</td><td>Role</td></tr>
+        <tr><td>PC06</td><td>Joe</td><td>Terri</td><td>Gnome</td><td>Cleric</td><td>54</td><td>18</td><td>Support,Caster</td></tr>
+        <tr><td>PC07</td><td>Meg</td><td>Betty</td><td>Gnome</td><td>Sorcerer</td><td>43</td><td>17</td><td>Dps,Caster</td></tr>
+    </table>
     <p>5 aggregate functions can be used to change how the information is 
     returned. COUNT returns the number of rows, SUM returns the summative 
     value of the data, AVG gives the average, MIN and MAX return the 
